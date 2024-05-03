@@ -1,0 +1,510 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500;600;700;800&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: 'Baloo Bhai 2', sans-serif;
+    
+}
+body{
+    overflow-x: hidden;
+}
+.parent_div{
+    background-image: linear-gradient(to right, #142469, #1CB5E0);
+    height: 100vh;
+    width: 80%;
+    left: 20%;
+    display: flex;
+    position: relative;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.open_btn_div i {
+    font-size: 30px;
+    position: absolute;
+    color: white;
+}
+
+.open_btn_div {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 5%;
+    top:5%;
+    cursor: pointer;
+    border-radius: 15px 15px 15px 15px;
+    display: none;
+}
+
+.open_btn_div i:hover{
+    left:10%;
+    top:10%;
+}
+
+.div_1 {
+    width:80%;
+    height: 75%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    background-color:rgb(209 238 255);
+    border-radius: 10% 10% 10% 10%;
+}
+
+.icon_logo {
+    width: 125px;
+    height: 100px;
+    position: absolute;
+    top: 2%;
+    left: 45%;
+}
+
+
+.logout_div {
+    position: absolute;
+    top:5%;
+    right: 5%;
+    width: 30px;
+    height: 30px;
+}
+
+.logout_div i{
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    cursor: pointer;
+}
+
+.logout_div i:hover {
+    left:10%;
+}
+
+
+
+
+
+
+/* nav bar css */
+
+.sidenav {
+    height: 100vh;
+    width: 20%;
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0; 
+    background-color: rgb(209 238 255);
+    /* align-items: flex-start; */
+    flex-direction: column;
+}
+
+.nav_logo_box{
+    align-self: center;
+    width: 80%;
+    height: 150px;
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.nav_logo_box img{
+    width: 100%;
+    height: 100%;
+}
+
+.Menu_tag_div {
+    align-self: center;
+    width: 80%;
+    height: 50px;
+    display: flex;
+    border-radius: 15px;
+    background-color: white;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.button_box {
+    width: 80%;
+    height: 300px;
+    margin-top: 20px;
+    align-self: center;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button_box div{
+    width: 80%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    margin-top: 10px;
+    background-color: white;
+    cursor: pointer;
+
+}
+
+.button_box div:hover{
+    background-color: #e3e9eb;
+}
+
+.button_box .active{
+    background-color: rgb(209 238 255);
+}
+
+.button_box p{
+    margin-left: 10px;
+}
+
+.button_box .icon {
+    font-size: 22px;
+    margin-left: 10px;
+}
+
+.button_box a{
+    width: 80%;
+    height: 10%;
+    color: black;
+    text-decoration: none;
+    border-radius: 15px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.button_box a:hover{
+    background-color: #e3e9eb;
+}
+
+
+.nav_footer {
+    width: 80%;
+    flex: 1 0 auto;
+    display: flex;
+    align-self: center;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    
+}
+
+.nav_footer div{
+    width: 100%;
+    display: flex;
+    border-radius: 15px;
+    background-color: white;
+    justify-content: center;
+}
+
+.nav_footer div img{
+    width: 20%;
+    height: 30px;
+    border-radius: 15px;
+}
+
+.nav_footer div p{
+    width: 80%;
+    white-space: normal;
+    word-break: break-all;
+    box-sizing: border-box;
+}
+
+/*
+-----NAV BAR  CSS END
+
+.nav_footer div{
+    width: 200px;
+    display: flex;
+    overflow: hidden;
+}
+.nav_footer div img{
+    flex: 1;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+}
+
+.nav_footer div p{
+    white-space: normal;
+    word-break: break-all;
+} */
+
+
+
+.img_info_div {
+    display: flex;
+    width:100%;
+    height: 50%;
+}
+
+.img_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:50%;
+    height: 100%;
+}
+
+.img_div img{
+    width:80%;
+    height: 80%;
+    border-radius: 50%;
+}
+
+.info_div {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+
+.sub_info_div div{
+    display: flex;
+    width: 90%;
+    padding: 10px;
+    background-color: #FFF;
+    border-radius: 15px;
+    margin-top: 10px;
+
+}
+
+.sub_info_div div p{
+    margin-left: 10px;
+    word-break: break-all;
+}
+
+.sub_info_div div label{
+    font-weight: 600;
+}
+
+.check_in_out_div {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.button_div{
+    align-self:center;
+    display: flex;
+    align-content: flex-start;
+    justify-content: center;
+    width:95%;
+    height: 85%;
+    background-color: #FFF;
+    border-radius: 20px;
+    flex-direction: column;
+}
+
+.alert {
+    width: 80%;
+    height: 100px;
+    background-color:#c0ecf7;
+    color: #00c8ff;
+    border-radius: 20px;
+    align-self: center;
+    line-height:3;
+	padding:10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.alert img{
+    width: 50px;
+    height: 50px;
+    
+}
+
+.alert p{
+    /* word-break: break-all; */
+    white-space: normal;
+}
+
+
+
+/* dual button css */
+
+[btn-group] {
+	position:relative;
+	display:inline-block;
+	margin:20px 10px;
+    align-self: center;
+}
+
+[btn-group]:before {
+    content: attr(data-grouptype);
+    color: #999;
+    display: block;
+    font-size: 0.9125em;
+    width: 19px;
+    height: 19px;
+    padding: 13px;
+    border-radius: 50%;
+    background: #FFF;
+    position: absolute;
+    left: 50%;
+    top: 13px;
+    margin-left: -30px;
+    line-height: 21px;
+}
+
+[btn-group] > a + a {
+	margin-left:5px;
+}
+
+[btn-group] > a {
+	display:inline-block;
+	padding:6px 14px;
+	background:#F2F2F2;
+	border-radius:3px;
+	font-size:1.125em;
+	color:#B9BCBC;
+	transition:background .3s ease, color .3s ease;
+	text-decoration:none;
+	transition:color .3s ease;
+	padding:20px 60px;
+	text-transform:uppercase;
+}
+
+[btn-group] > a:nth-of-type(1) {
+	/* background:#A1D36E; */
+    background-image: linear-gradient(to right, #142469, #1CB5E0);
+	color:#FFF;
+}
+
+[btn-group] > a:nth-of-type(1):hover {
+	background:#94CD5A;
+}
+
+[btn-group] > a:nth-of-type(2) {
+    background-image: linear-gradient(to right, #142469, #1CB5E0);
+	color:#FFF;
+}
+
+[btn-group] > a:nth-of-type(2):hover {
+	background:#55CBD8;
+}
+
+
+/* _____ for tablet width 768pixels */
+
+@media screen and (max-width: 768px) {
+
+    .open_btn_div {
+        display: none;
+    }
+
+    .button_div {
+        width: 90%;
+    }
+
+    .info_div {
+        width: 45%;
+    }
+
+    .nav_logo_box {
+        height: 137px;
+    }
+
+    .icon_logo {
+        left: 40%;
+    }
+
+    
+}
+
+
+/* ----- for moblie-L  width 425px */
+
+@media screen and (max-width:425px) {
+
+    .open_btn_div{
+        display: block;
+    }
+
+    .sub_info_div div {
+        display: block;
+        width: 80%;
+    }
+
+    .sub_info_div {
+        overflow-y: scroll;
+        height: 90%;
+    }
+
+    .sub_info_div div p{
+        margin-left: 0px;
+    }
+
+    [btn-group] > a {
+        font-size: 1rem;
+        padding: 15px 23px;
+    }
+
+    [btn-group]:before {
+        font-size: 0.9125em;
+        width: 19px;
+        height: 19px;
+        padding: 4px;
+        margin-left: -21px;
+        top: 15px;
+    }
+
+    .sidenav {
+        width: 0%;
+    }
+    .parent_div{
+        background-image: linear-gradient(to right, #142469, #1CB5E0);
+        width: 100%;
+        left: 0%;
+    }
+
+    .icon_logo {
+        left: 35%;
+        height: 115px;
+        top: 1%;
+        
+    }
+    
+
+    .div_1 {
+        height:70%;
+    }
+}
+
+
+/* ----- mobile - S width 320px */
+@media screen and (max-width:320px) {
+    .sub_info_div div {
+        width: 85%;
+        padding: 5px;
+    }
+
+    [btn-group] > a {
+        font-size: 1rem;
+        padding: 0.5rem 0.6rem;
+    }
+
+    
+    [btn-group]:before {
+        top: 7px;
+    }
+
+    .img_div img {
+        width: 75%;
+        height: 60%;
+    }
+} 
+

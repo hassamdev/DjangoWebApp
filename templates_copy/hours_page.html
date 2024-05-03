@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hours</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+        href="static\hours_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="sidenav">
+        <div class="nav_logo_box">
+            <img src="static\icons\logo_real.png"
+                alt="img">
+        </div>
+
+        <div class="Menu_tag_div">
+            <h4>Menu</h4>
+        </div>
+        <div class="button_box">
+            <a href="after_login_page.html">
+                <!-- <div class="status_div " loading="lazy"> -->
+                    <ion-icon class="icon" name="checkbox-outline"></ion-icon>
+                    <p> Status</p>
+                <!-- </div> -->
+            </a>
+            <div class="hours_div active" loading="lazy">
+                <ion-icon class="icon" name="time-outline"></ion-icon>
+                <p> Hours</p>
+            </div>
+        </div>
+
+        <div class="nav_footer">
+            <div class="account_div">
+                <!-- <img src="static\image\boy.jpg"
+                    alt=""> -->
+                <p>hassamghori722@gmail.com</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="parent_div">
+        <img class="icon_logo"
+            src="static\icons\logo.png"
+            alt="img">
+        <div class="logout_div">
+            <i class="fa fa-sign-out"> </i>
+        </div>
+        <div class="open_btn_div">
+            <i class="fa fa-bars" onclick="openNav()"></i>
+        </div>
+
+        <div class="div_1">
+            <div class="main_div">
+                <div class="title_div">
+                    <strong>My Hours</strong>
+                </div>
+
+                <div class="total_hours_div">
+                    <div class="total_hr_title_div">
+                        <strong>Total Hours</strong>
+                    </div>
+
+                    <div class="actual_hr_div">
+                        <p>18:00:00</p>
+                        <p>h:m:s</p>
+                    </div>
+                </div>
+
+                <div class="option_div">
+                    <div class="button_div">
+                        <a href="#" class="D_btn">D</a>
+                        <a href="#" class="W_btn">W</a>
+                        <a href="#" class="M_btn">M</a>
+                        <a href="#" class="Y_btn">Y</a>
+                    </div>
+                    <div class="filter_div">
+                        <img class="filter_img_btn" src="static\icons\filter.png"
+                            alt="">
+                    </div>
+                </div>
+
+                <div class="data_div">
+                    <!-- <div class="div_for_scroll"> -->
+                        <div class="_data">
+                            <div class="in_out_date">
+                                <div class="_in">
+                                    <img src="static\icons\arrow_up.png"
+                                        alt="">
+                                    <div class="time_and_in">
+                                        <strong>In</strong><br>
+                                        <p>10:05 AM</p>
+                                    </div>
+
+
+                                </div>
+                                <div class="_out">
+                                    <img src="static\icons\arrow_down.png"
+                                        alt="">
+                                    <div class="time_and_out">
+                                        <strong>Out</strong>
+                                        <p>01:05 PM</p>
+                                    </div>
+
+                                </div>
+                                <div class="date">
+                                    <img src="static\icons\date.png"
+                                        alt="">
+                                    <div class="date_and_date">
+                                        <strong>Date</strong>
+                                        <p>10-7-23</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="hours">
+                                <div class="inside_hr_div">
+                                    <strong>Hours</strong>
+                                    <p>03:00:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="_data">
+                            <div class="in_out_date">
+                                <div class="_in">
+                                    <img src="static\icons\arrow_up.png"
+                                        alt="">
+                                    <div class="time_and_in">
+                                        <strong>In</strong><br>
+                                        <p>10:05 AM</p>
+                                    </div>
+
+
+                                </div>
+                                <div class="_out">
+                                    <img src="static\icons\arrow_down.png"
+                                        alt="">
+                                    <div class="time_and_out">
+                                        <strong>Out</strong>
+                                        <p>01:05 PM</p>
+                                    </div>
+
+                                </div>
+                                <div class="date">
+                                    <img src="static\icons\date.png"
+                                        alt="">
+                                    <div class="date_and_date">
+                                        <strong>Date</strong>
+                                        <p>10-7-23</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="hours">
+                                <div class="inside_hr_div">
+                                    <strong>Hours</strong>
+                                    <p>03:00:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="_data">
+                            <div class="in_out_date">
+                                <div class="_in">
+                                    <img src="static\icons\arrow_up.png"
+                                        alt="">
+                                    <div class="time_and_in">
+                                        <strong>In</strong><br>
+                                        <p>10:05 AM</p>
+                                    </div>
+
+
+                                </div>
+                                <div class="_out">
+                                    <img src="static\icons\arrow_down.png"
+                                        alt="">
+                                    <div class="time_and_out">
+                                        <strong>Out</strong>
+                                        <p>01:05 PM</p>
+                                    </div>
+
+                                </div>
+                                <div class="date">
+                                    <img src="static\icons\date.png"
+                                        alt="">
+                                    <div class="date_and_date">
+                                        <strong>Date</strong>
+                                        <p>10-7-23</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="hours">
+                                <div class="inside_hr_div">
+                                    <strong>Hours</strong>
+                                    <p>03:00:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="_data">
+                            <div class="in_out_date">
+                                <div class="_in">
+                                    <img src="static\icons\arrow_up.png"
+                                        alt="">
+                                    <div class="time_and_in">
+                                        <strong>In</strong><br>
+                                        <p>10:05 AM</p>
+                                    </div>
+
+
+                                </div>
+                                <div class="_out">
+                                    <img src="static\icons\arrow_down.png"
+                                        alt="">
+                                    <div class="time_and_out">
+                                        <strong>Out</strong>
+                                        <p>01:05 PM</p>
+                                    </div>
+
+                                </div>
+                                <div class="date">
+                                    <img src="static\icons\date.png"
+                                        alt="">
+                                    <div class="date_and_date">
+                                        <strong>Date</strong>
+                                        <p>10-7-23</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="hours">
+                                <div class="inside_hr_div">
+                                    <strong>Hours</strong>
+                                    <p>03:00:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="_data">
+                            <div class="in_out_date">
+                                <div class="_in">
+                                    <img src="static\icons\arrow_up.png"
+                                        alt="">
+                                    <div class="time_and_in">
+                                        <strong>In</strong><br>
+                                        <p>10:05 AM</p>
+                                    </div>
+
+
+                                </div>
+                                <div class="_out">
+                                    <img src="static\icons\arrow_down.png"
+                                        alt="">
+                                    <div class="time_and_out">
+                                        <strong>Out</strong>
+                                        <p>01:05 PM</p>
+                                    </div>
+
+                                </div>
+                                <div class="date">
+                                    <img src="static\icons\date.png"
+                                        alt="">
+                                    <div class="date_and_date">
+                                        <strong>Date</strong>
+                                        <p>10-7-23</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="hours">
+                                <div class="inside_hr_div">
+                                    <strong>Hours</strong>
+                                    <p>03:00:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="_data">
+                            <div class="in_out_date">
+                                <div class="_in">
+                                    <img src="static\icons\arrow_up.png"
+                                        alt="">
+                                    <div class="time_and_in">
+                                        <strong>In</strong><br>
+                                        <p>10:05 AM</p>
+                                    </div>
+
+
+                                </div>
+                                <div class="_out">
+                                    <img src="static\icons\arrow_down.png"
+                                        alt="">
+                                    <div class="time_and_out">
+                                        <strong>Out</strong>
+                                        <p>01:05 PM</p>
+                                    </div>
+
+                                </div>
+                                <div class="date">
+                                    <img src="static\icons\date.png"
+                                        alt="">
+                                    <div class="date_and_date">
+                                        <strong>Date</strong>
+                                        <p>10-7-23</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="hours">
+                                <div class="inside_hr_div">
+                                    <strong>Hours</strong>
+                                    <p>03:00:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="myModal">
+        <div id="popup-window">
+            <div>
+                <h1>Start Date:</h1>
+                <input type="date" class = "start_date" id="start_date" name="start_date" required>
+            </div>
+            <div>
+                <h1>End Date:</h1>
+                <input type="date" class = "End_date" id="End_date" name="End_date" required>
+            </div>
+            <div class="close_and_continue_btn">
+                <a id="close-button" href="#">Close</a>
+                <a id="continue-button" href="#">Continue</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+                // Get the elements by their ID
+        var popupLink = document.getElementsByClassName("filter_img_btn");
+        var popupWindow =document.getElementById("myModal");
+        var closeButton = document.getElementById("close-button");
+        // Show the pop-up window when the link is clicked
+        console.log(popupLink)
+        popupLink[0].addEventListener("click", function(event) {
+            event.preventDefault();
+            popupWindow.style.display = "block";
+        });
+        // Hide the pop-up window when the close button is clicked
+        closeButton.addEventListener("click", function() {
+            popupWindow.style.display = "none";
+        });
+
+
+        function openNav() {
+            var sidebar = document.querySelector(".sidenav");
+            // var sidebar_ul_items = document.querySelector(".sidenav ul")
+            var parent_div = document.querySelector(".parent_div")
+            console.log("hassam")
+            if (sidebar.style.width === "0%" || sidebar.style.width === "") {
+                sidebar.style.width = "50%";
+                // sidebar_ul_items.style.display ="block";
+                // parent_div.style.width = "80%"
+                parent_div.style.left = "50%"
+
+            } else {
+                sidebar.style.width = "0%";
+                // sidebar_ul_items.style.display ="none";
+                parent_div.style.width = "100%"
+                parent_div.style.left = "0%"
+            }
+        }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

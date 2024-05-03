@@ -1,0 +1,91 @@
+body{
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(209 238 255);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.child_div{
+    width: 30%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid white;
+    box-shadow: 10px 10px 5px rgb(199, 223, 231);
+    background-color:rgb(209 238 255);
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+
+}
+
+.child_div form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.child_div form div{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+}
+
+.submit_btn{
+    cursor: pointer;
+    background-color: #55CBD8;
+    width: 25%;
+    color: white;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    margin-top: 2%;
+}
+
+.child_div p{
+    font-size: 2vw;
+    font-weight: 100;
+    margin-top: 0;
+    margin-bottom: 3%;
+}
+
+.child_div img{
+    width: 20%;
+    height: 25%;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .child_div p {
+        font-size: 23px;
+    }
+    .child_div img {
+        width: 99px;
+        height: 94px;
+    }
+
+    .child_div {
+        width: 528px;
+        border:30px;
+    }
+    
+}
+
+
+@media screen and (max-width: 425px) {
+    .child_div {
+        width: 541px;
+        height: 428px;
+        border: 20px;
+    }
+}

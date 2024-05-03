@@ -1,0 +1,255 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+body{
+    overflow-x: hidden;
+}
+
+body .error {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(240, 43, 43, 0.404);
+}
+
+.parent_div{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+  
+}
+
+
+.div_1 {
+    height:100%;
+    width: 50%;
+    position: absolute;
+    top: 10;
+    left: 60%;
+    /* background-color: #142469; */
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    background-image: linear-gradient(to right, #142469, #1CB5E0);
+
+}
+
+.div_2{
+    top: 10;
+    height: 80%;
+    width: 80%;
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 5px 5px transparent;
+}
+
+.div_2_1 {
+    height:100%;
+    width: 40%;
+    right: 60%;
+    /* background-color: #142469; */
+    border-top-right-radius: 60%;
+    border-bottom-right-radius: 30%;
+    background-image: linear-gradient(to left, #142469, #1CB5E0);
+
+}
+
+.line_1 {
+    height: 5%;
+    width: 20%;
+    position: absolute;
+    left: 25%;
+    top:35%;
+    background-color: white;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.line_2 {
+    height: 5%;
+    width: 20%;
+    position: absolute;
+    left: 20%;
+    top:50%;
+    background-color: white;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+
+.line_3 {
+    height: 5%;
+    width: 20%;
+    position: absolute;
+    left: 25%;
+    top:65%;
+    background-color: white;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.main_box {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+
+}
+
+.main_box h3{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.main_box form .inputs{
+    display: flex;
+    flex-direction:  column; 
+    width: 300px;
+    
+}
+
+.inputs input{
+    margin-top: 10px;
+    border-radius: 20px;
+    padding-left: 5px;
+    width: auto;
+    height: 25px;
+}
+
+.sub_btn{
+    border-radius: 20px;
+    background-color: #1CB5E0;
+    color: white;
+    width: 100px;
+    margin-top: 15px;
+    height: 20px;
+}
+
+
+
+.gender select {
+    background-color: white;
+    outline: none;
+    border: 0;
+}
+
+.birth_date_div input {
+    border: 0;
+}
+
+
+.gender {
+    border-bottom: 1px solid black ;
+    width: auto;
+    margin-top: 10px;
+}
+
+.birth_date_div {
+    border-bottom:1px solid black ;
+    width: auto;
+    margin-top: 5px;
+}
+
+
+
+@media  screen and (max-width:768px) {
+    .main_box{
+        right: 20px;
+    }
+    
+}
+
+@media screen and (max-width:425px) {
+    .div_2{
+        width: 100%;
+        height: 100%;
+    }
+
+    .main_box form .inputs {
+        width: 186px;
+    }
+
+    .main_box h3{
+        margin-bottom: 4px;
+        margin-left: 5px;
+    }
+
+    .birth_date_div input{
+        margin: 0;
+        width: 165px;
+    }
+
+
+    .gender select {
+        width: 113px;    
+    }
+   
+}
+
+
+@media screen and (max-width:375px) {
+
+    .div_1 {
+        border-top-left-radius: 60%;
+        border-bottom-left-radius: 35%;
+    }
+
+    .main_box form .inputs {
+        width: 171px;
+    }
+
+    .inputs input{
+        font-size: 11px;
+    }
+
+
+    .gender {
+        border: 1px solid black;
+        border-radius: 20px;
+        padding-left: 5px;
+        height: 23px;
+        margin-top: 10px;
+        padding-top: 3px;
+    }
+
+    .gender select {
+        width: 90px;
+    }
+
+    .birth_date_div input {
+        margin: 0;
+        width: 151px;
+        padding: 0;
+        height: 25px;
+    }
+    
+}
+
+
+
+@media screen and (max-width:320px) {
+
+    
+    .main_box form .inputs {
+        width: 157px;
+    }
+    
+    .gender select {
+        width: 80px;
+    }
+
+   
+
+}
+

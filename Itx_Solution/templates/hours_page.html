@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hours</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+        href="static\hours_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="sidenav">
+
+        <div class="nav_arrow_div">
+            <img src="static\icons\cross.png" onclick="openNav()" alt="icon">
+        </div>
+        <div class="nav_logo_box">
+            <img src="static\icons\logo_real.png"
+                alt="img">
+        </div>
+
+        <div class="Menu_tag_div">
+            <h4>Menu</h4>
+        </div>
+        <div class="button_box">
+            <a href="/after_login">
+                <!-- <div class="status_div " loading="lazy"> -->
+                    <ion-icon class="icon" name="checkbox-outline"></ion-icon>
+                    <p> Status</p>
+                <!-- </div> -->
+            </a>
+            <div class="hours_div active" loading="lazy">
+                <ion-icon class="icon" name="time-outline"></ion-icon>
+                <p> Hours</p>
+            </div>
+        </div>
+
+        <div class="nav_footer">
+            <div class="account_div">
+                <!-- <img src="static\image\boy.jpg"
+                    alt=""> -->
+                <p>hassamghori722@gmail.com</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="parent_div">
+        <div class="div_0">
+            <div class="open_btn_div">
+                <i class="fa fa-bars" onclick="openNav()" ></i>
+            </div>
+            <img class = "icon_logo" src="static\icons\logo.png" alt="img">
+            <div class="logout_div">
+                <a href="/logout"><i class="fa fa-sign-out"> </i></a>
+            </div>
+        </div>
+        <div class="div_1">
+            <div class="main_div">
+                <div class="title_div">
+                    <strong>My Hours</strong>
+                </div>
+
+                <div class="total_hours_div">
+                    <div class="total_hr_title_div">
+                        <strong>Total Hours</strong>
+                    </div>
+
+                    <div class="actual_hr_div">
+                        <p id="total_hours_tag">{{ today_data.hour }}</p>
+                        <p>h:m:s</p>
+                    </div>
+                </div>
+
+                <div class="option_div">
+                    <div class="button_div">
+                        <a onclick="Day_click()" class="D_btn">D</a>
+                        <a onclick="Week_click()" class="W_btn">W</a>
+                        <a onclick="Month_click()" class="M_btn">M</a>
+                        <a onclick="Year_click()" class="Y_btn">Y</a>
+                    </div>
+                    <div class="filter_div">
+                        <img class="filter_img_btn" src="static\icons\filter.png"
+                            alt="">
+                    </div>
+                </div>
+
+                <div class="data_div" id="data_day">
+                    <!-- <div class="div_for_scroll"> -->
+                       
+                        <div class="_data" id="day_child">
+                            <div class="in_out_date">
+                                <div class="_in">
+                                    <img src="static\icons\arrow_up.png"
+                                        alt="">
+                                    <div class="time_and_in">
+                                        <strong>In</strong><br>
+                                        <p id="check_in_time">{{ today_data.Check_In }}</p>
+                                    </div>
+
+
+                                </div>
+                                <div class="_out">
+                                    <img src="static\icons\arrow_down.png"
+                                        alt="">
+                                    <div class="time_and_out">
+                                        <strong>Out</strong>
+                                        <p id="check_out_time">{{ today_data.Check_Out }}</p>
+                                    </div>
+
+                                </div>
+                                <div class="date">
+                                    <img src="static\icons\date.png"
+                                        alt="">
+                                    <div class="date_and_date">
+                                        <strong>Date</strong>
+                                        <p id="date_tag">{{ today_data.date }}</p>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="hours">
+                                <div class="inside_hr_div">
+                                    <strong>Hours</strong>
+                                    <p id="hour_tag">{{ today_data.hour }}</p>
+                                </div>
+                            </div>
+                        </div>
+ 
+                    <!-- </div> -->
+                </div>
+
+                <!-- to adding the data of week -->
+                <div class="data_div" id="data_week">
+                </div>
+
+                <!-- to adding the data of month -->
+                <div class="data_div" id="data_month">
+                </div>
+
+                <!-- to adding the data of year -->
+                <div class="data_div" id="data_year">
+                </div>
+
+                <!-- to adding the filtered data -->
+                <div class="data_div" id="data_filter">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="myModal">
+        <div id="popup-window">
+            <div>
+                <h1>Start Date:</h1>
+                <input type="date" class = "start_date" id="start_date" name="start_date" required>
+            </div>
+            <div>
+                <h1>End Date:</h1>
+                <input type="date" class = "End_date" id="End_date" name="End_date" required>
+            </div>
+            <div class="close_and_continue_btn">
+                <a id="close-button" onclick="close_btn_click()">Close</a>
+                <a id="continue-button" onclick="continue_btn_click()">Continue</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        //csrf-token for authentication
+        var token = document.cookie.split('=');
+
+        function openNav() { 
+            var sidebar = document.querySelector(".sidenav");
+            // var sidebar_ul_items = document.querySelector(".sidenav ul")
+            var parent_div = document.querySelector(".parent_div")
+            console.log(sidebar.style.width)
+            if (sidebar.style.width === "0%" || sidebar.style.width === "") {
+                sidebar.style.width = "100%";
+                sidebar.style.display="flex"
+                parent_div.style.display ="none"
+
+            } else {
+                sidebar.style.width = "0%";
+                parent_div.style.display ="flex"
+                sidebar.style.display="none"
+
+                //parent_div.style.left ="0%"
+            }
+        }
+
+        
+
+        var header_value = 'header-check'
+        var value_to_check = "function-request"
+
+
+        
+
+        // days,month,week,year functionality
+
+        var D_btn = document.querySelector('.D_btn')
+        var W_btn = document.querySelector('.W_btn')
+        var M_btn = document.querySelector('.M_btn')
+        var Y_btn = document.querySelector('.Y_btn')
+        var filter_div_btn = document.querySelector(".filter_div")
+
+        var day_div = document.getElementById("data_day")
+        var week_div = document.getElementById("data_week")
+        var month_div = document.getElementById("data_month")
+        var Year_div = document.getElementById("data_year")
+        var filter_div = document.getElementById("data_filter")
+        var total_hour_tag = document.getElementById("total_hours_tag")
+
+        // child_div
+        var child_div = document.getElementById("day_child")
+
+
+        // flags
+        var week_data_fetched_flag = false;
+        var month_data_fetched_flag = false;
+        var year_data_fetched_flag = false;
+
+        var today_day_hour = document.getElementById("hour_tag").textContent
+        var total_week_hour = null
+        var total_month_hour = null
+        var total_year_hour = null
+
+
+        // Getting popup div by their ID
+        var popupLink = document.getElementsByClassName("filter_img_btn");
+        var popupWindow =document.getElementById("myModal");
+        var closeButton = document.getElementById("close-button");
+        // Show the pop-up window when the link is clicked
+        //console.log(popupLink)
+        popupLink[0].addEventListener("click", function(event) {
+            event.preventDefault();
+            popupWindow.style.display = "block";
+        });
+        // Hide the pop-up window when the close button is clicked
+        function close_btn_click() {
+            popupWindow.style.display = "none";
+        };
+
+
+
+
+        /// function to filter the data
+
+        function continue_btn_click(){
+            remove_child_ele_filter_div();
+
+            var start_date_input = document.getElementById("start_date")
+            var End_date_input = document.getElementById('End_date')
+
+            var start_date = start_date_input.value
+            var end_date = End_date_input.value
+
+            var start_dateObject = new Date(start_date);
+            var end_dateObject = new Date(end_date);
+
+
+            if(start_date==="" || end_date===""){
+                alert("please enter the both date:")
+                close_btn_click()
+                return
+            } else if(start_dateObject > end_dateObject){
+                alert("End date is greter than Start date!")
+                close_btn_click()
+                return
+            }
+            
+            var data_to_send = {"start_date":start_date,"end_date":end_date}
+
+            fetch('/filter-data', {
+                    method: 'POST',
+                    headers: {
+                        "header-check":value_to_check,
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': token[1],  // Include the CSRF token if required
+                    },
+                    body:JSON.stringify(data_to_send)
+                })
+                .then(response => response.json())
+                .then(data_dic => {
+                    // Handle the response from Django (if any)
+                    console.log(data_dic);
+                    data = data_dic.data
+
+                    // adding the value of total hours in p-tag
+                    total_hour_tag.textContent = data_dic.total_time
+                    
+                    for (let key in data){
+                        child_div = child_div.cloneNode(true)
+                        child_div.getElementsByTagName("p").check_in_time.textContent=data[key].Check_In
+                        child_div.getElementsByTagName("p").check_out_time.textContent=data[key].Check_Out
+                        child_div.getElementsByTagName("p").date_tag.textContent=key
+                        child_div.getElementsByTagName("p").hour_tag.textContent=data[key].hours
+
+                        filter_div.appendChild(child_div)
+                    };
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+
+            D_btn.style.background="#FFF";
+            W_btn.style.background="#FFF";
+            M_btn.style.background="#FFF";
+            Y_btn.style.background="#FFF";
+            filter_div_btn.style.background ="#e3e9eb";
+
+            day_div.style.display = "none"
+            week_div.style.display = "none"
+            month_div.style.display = "none"
+            Year_div.style.display = "none"
+            filter_div.style.display = "flex"
+            close_btn_click();
+
+            // to empty the date inputs 
+            //start_date_input.value = ""
+            //End_date_input.value = ""
+        };
+
+
+
+        /// to remove the child elements of filter_div
+
+        function remove_child_ele_filter_div(){
+            filter_div.innerHTML=""
+        };
+
+
+        function Day_click(){
+            D_btn.style.background="#e3e9eb";
+            W_btn.style.background="#FFF";
+            M_btn.style.background="#FFF";
+            Y_btn.style.background="#FFF";
+            filter_div_btn.style.background ="#FFF"; 
+
+
+            day_div.style.display = "flex"
+            week_div.style.display = "none"
+            month_div.style.display = "none"
+            Year_div.style.display = "none"
+            filter_div.style.display = "none"
+            total_hour_tag.textContent = today_day_hour
+
+            remove_child_ele_filter_div();
+
+        }
+
+        function Week_click(){
+            remove_child_ele_filter_div();
+
+
+            D_btn.style.background="#FFF";
+            W_btn.style.background="#e3e9eb";
+            M_btn.style.background="#FFF";
+            Y_btn.style.background="#FFF";
+            filter_div_btn.style.background ="#FFF"; 
+
+
+
+            //console.log(Year_div)
+            day_div.style.display = "none"
+            week_div.style.display = "flex"
+            month_div.style.display = "none"
+            Year_div.style.display = "none"
+            filter_div.style.display = "none"
+
+            // parent div
+            //var parent_div = document.getElementById('data_week')
+            //var child_div = document.getElementById("day_child")
+
+            if (total_week_hour){
+                total_hour_tag.textContent = total_week_hour
+            };
+
+        
+            /// to check data is already fetched or not
+            if(week_data_fetched_flag===false){
+                fetch('/week-data', {
+                    method: 'GET',
+                    headers: {
+                        "header-check":value_to_check,
+                        'Content-Type': 'application/json',
+                       // 'Authorization': csrftoken,  // Include the CSRF token if required
+                    }
+                })
+                .then(response => response.json())
+                .then(data_dic => {
+                    // Handle the response from Django (if any)
+                    console.log(data_dic);
+                    data = data_dic.data
+                    total_week_hour = data_dic.total_time
+                    total_hour_tag.textContent = total_week_hour
+                    for (let key in data){
+                        child_div = child_div.cloneNode(true)
+                        child_div.getElementsByTagName("p").check_in_time.textContent=data[key].Check_In
+                        child_div.getElementsByTagName("p").check_out_time.textContent=data[key].Check_Out
+                        child_div.getElementsByTagName("p").date_tag.textContent=key
+                        child_div.getElementsByTagName("p").hour_tag.textContent=data[key].hours
+
+                        week_div.appendChild(child_div)
+                    };
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+
+                week_data_fetched_flag = true;
+            };
+
+
+        };
+
+       
+       
+        function Month_click(){
+            remove_child_ele_filter_div();
+
+
+            D_btn.style.background="#FFF";
+            W_btn.style.background="#FFF";
+            M_btn.style.background="#e3e9eb";
+            Y_btn.style.background="#FFF";
+            filter_div_btn.style.background ="#FFF"; 
+
+
+            day_div.style.display = "none"
+            week_div.style.display = "none"
+            month_div.style.display = "flex"
+            Year_div.style.display = "none"
+            filter_div.style.display = "none"
+
+            //var parent_div = document.getElementById('data_month')
+
+            if (total_month_hour){
+                total_hour_tag.textContent = total_month_hour
+            };
+        
+            /// to check data is already fetched or not
+            if(month_data_fetched_flag===false){
+                fetch('/month-data', {
+                    method: 'GET',
+                    headers: {
+                        "header-check":value_to_check,
+                        'Content-Type': 'application/json',
+                       // 'Authorization': csrftoken,  // Include the CSRF token if required
+                    }
+                })
+                .then(response => response.json())
+                .then(data_dic => {
+                    // Handle the response from Django (if any)
+                    console.log(data_dic);
+                    data = data_dic.data
+                    total_month_hour = data_dic.total_time
+                    total_hour_tag.textContent = total_month_hour
+                    for (let key in data){
+                        child_div = child_div.cloneNode(true)
+                        child_div.getElementsByTagName("p").check_in_time.textContent=data[key].Check_In
+                        child_div.getElementsByTagName("p").check_out_time.textContent=data[key].Check_Out
+                        child_div.getElementsByTagName("p").date_tag.textContent=key
+                        child_div.getElementsByTagName("p").hour_tag.textContent=data[key].hours
+
+                        month_div.appendChild(child_div)
+                    };
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+
+                month_data_fetched_flag = true;
+            };
+        };
+
+        function Year_click(){
+            remove_child_ele_filter_div();
+
+
+            D_btn.style.background="#FFF";
+            W_btn.style.background="#FFF";
+            M_btn.style.background="#FFF";
+            Y_btn.style.background="#e3e9eb";
+            filter_div_btn.style.background ="#FFF"; 
+
+
+            day_div.style.display = "none"
+            week_div.style.display = "none"
+            month_div.style.display = "none"
+            Year_div.style.display = "flex"
+            filter_div.style.display = "none"
+
+            //var parent_div = document.getElementById('data_year')
+            //var child_div = document.getElementById("day_child")
+
+            if (total_year_hour){
+                total_hour_tag.textContent = total_year_hour
+            };
+        
+            /// to check data is already fetched or not
+            if(year_data_fetched_flag===false){
+                fetch('/year-data', {
+                    method: 'GET',
+                    headers: {
+                        "header-check":value_to_check,
+                        'Content-Type': 'application/json',
+                       // 'Authorization': csrftoken,  // Include the CSRF token if required
+                    }
+                })
+                .then(response => response.json())
+                .then(data_dic => {
+                    // Handle the response from Django (if any)
+                    console.log(data_dic);
+                    data = data_dic.data
+                    total_year_hour = data_dic.total_time
+                    total_hour_tag.textContent = total_year_hour
+                    for (let key in data){
+                        child_div = child_div.cloneNode(true)
+                        child_div.getElementsByTagName("p").check_in_time.textContent=data[key].Check_In
+                        child_div.getElementsByTagName("p").check_out_time.textContent=data[key].Check_Out
+                        child_div.getElementsByTagName("p").date_tag.textContent=key
+                        child_div.getElementsByTagName("p").hour_tag.textContent=data[key].hours
+
+                        Year_div.appendChild(child_div)
+                    };
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+
+                year_data_fetched_flag = true;
+            };
+
+        };
+
+
+
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

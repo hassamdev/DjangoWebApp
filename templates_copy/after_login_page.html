@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>After Login</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="static\after_login_page.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+    </head>
+    <body>
+        <div class="sidenav">
+            <div class="nav_logo_box">
+                <img src="static\icons\logo_real.png" alt="img">
+            </div>
+
+            <div class="Menu_tag_div">
+                <h4>Menu</h4>
+            </div>
+            <div class="button_box">
+                <div class="status_div active" loading ="lazy">
+                    <ion-icon class="icon" name="checkbox-outline"></ion-icon>
+                    <p>  Status</p>
+                </div>
+                <a href="hours_page.html">
+                    <!-- <div class="hours_div" loading ="lazy"> -->
+                        <ion-icon class="icon" name="time-outline"></ion-icon>
+                        <p>  Hours</p>
+                    <!-- </div> -->
+                </a>
+            </div>
+
+            <div class="nav_footer">
+                <div class="account_div">
+                    <!-- <img src="static\image\boy.jpg" alt=""> -->
+                    <p>hassamghori722@gmail.com</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="parent_div">
+            <img class = "icon_logo" src="static\icons\logo.png" alt="img">
+            <div class="logout_div">
+                <i class="fa fa-sign-out"> </i>
+            </div>
+            <div class="open_btn_div">
+                <i class="fa fa-bars" onclick="openNav()" ></i>
+            </div>
+            
+            <div class = "div_1">
+                <div class="img_info_div">
+                    <div class="img_div">
+                        <img src="static\image\boy.jpg" alt="">
+                    </div>
+                    <div class="info_div">
+                        <div class="sub_info_div">
+                            <div class  = "person_name">
+                                <label for="p_name">Name</label>
+                                <p id="p_name">Hassam Ghori</p>
+                            </div>
+                            <div class  = "person_email">
+                                <label for="p_email">Email:</label>
+                                <p id="p_email">hassamghori722@gmail.com</p>
+                            </div>
+                            <div class  = "person_number">
+                                <label for="p_number">Cell No:</label>
+                                <p id="p_number">03453064869</p>
+                            </div>
+                            <div class  = "person_birth_date">
+                                <label for="p_dob">Birth Date:</label>
+                                <p id="p_dob">22-7-2000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="check_in_out_div">
+                    <div class="button_div">
+                        <div btn-group data-grouptype="OR">
+                            <a href="#">Check In</a>
+                            <a href="#">Check Out</a>
+                        </div>
+                        <div class="alert alert-success">
+                            <p><strong>Message</strong> This is a trail message.</p>
+                            <div>
+                                <img src="static\icons\check.png" alt="">
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            function openNav() { 
+                var sidebar = document.querySelector(".sidenav");
+                // var sidebar_ul_items = document.querySelector(".sidenav ul")
+                var parent_div = document.querySelector(".parent_div")
+                console.log(sidebar.style.width)
+                if (sidebar.style.width === "0%" || sidebar.style.width === "") {
+                    sidebar.style.width = "50%";
+                    // sidebar_ul_items.style.display ="block";
+                    // parent_div.style.width ="80%"
+                    parent_div.style.left ="50%"
+
+                } else {
+                    sidebar.style.width = "0%";
+                    // sidebar_ul_items.style.display ="none";
+                    parent_div.style.width ="100%"
+                    parent_div.style.left ="0%"
+                }
+            }
+        </script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>

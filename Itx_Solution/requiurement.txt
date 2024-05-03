@@ -1,0 +1,13 @@
+1) security measure
+	-@restrictdirectaccess-ok
+	-
+	-
+2) user interface
+	- password reset page-ok
+	- responsivness
+	-
+3) functionaliy:
+	- am/pm function-ok
+	- filter function-ok
+	-
+4) deploy:
